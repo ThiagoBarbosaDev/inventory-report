@@ -40,9 +40,11 @@ class SimpleReport:
         oldest = SimpleReport.find_oldest(data)
         closest = SimpleReport.find_closest_to_today(data)
         most_common = SimpleReport.find_most_common(data)
-        return (f"Data de fabricação mais antiga: {oldest}\n\
-Data de validade mais próxima: {closest}\n\
-Empresa com mais produtos: {most_common}")
+        return (
+            f"Data de fabricação mais antiga: {oldest}\n"
+            f"Data de validade mais próxima: {closest}\n"
+            f"Empresa com mais produtos: {most_common}"
+        )
 
 
 # data = [
