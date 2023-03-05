@@ -1,11 +1,11 @@
 # from inventory_report.reports.simple_report import SimpleReport
-from simple_report import SimpleReport
+from inventory_report.reports.simple_report import SimpleReport
 from collections import Counter
 
 
 class CompleteReport(SimpleReport):
-    def __init__(self, data):
-        self.data = data
+    # def __init__(self, data):
+    #     self.data = data
 
     @staticmethod
     def count_company_products(data):
@@ -92,14 +92,5 @@ class CompleteReport(SimpleReport):
 #     },
 # ]
 
-# products = CompleteReport.count_company_products(data)
-# responses = CompleteReport.create_product_response(products)
-# print('##', responses)
-# print(CompleteReport.generate(data))
-# complete_report = report + responses
-# print(complete_report)
-# print(data)
-# teste = [('Foo', 4), ('Bar', 2)]
 
-# for a, b in teste:
-#     print(a)
+# print(CompleteReport.generate(data))
