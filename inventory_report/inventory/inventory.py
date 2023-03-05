@@ -1,4 +1,5 @@
 import csv
+import json
 from inventory_report.reports.simple_report import SimpleReport
 from inventory_report.reports.complete_report import CompleteReport
 
@@ -7,10 +8,14 @@ class Inventory:
     @staticmethod
     def read_data(path):
         data = []
-        with open(path) as csv_file:
-            reader = csv.DictReader(csv_file)
-
-            data = list(reader)
+        if path.endswith('.csv'):
+            with open(path) as csv_file:
+                reader = csv.DictReader(csv_file)
+                data = list(reader)
+        elif path.endswith('.json'):
+            with open(path) as json_file:
+                content = json_file.read()
+                data = json.loads(content)
         return data
 
     @staticmethod
