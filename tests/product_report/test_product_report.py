@@ -10,7 +10,8 @@ product = Product(
     "em local seco",
 )
 
-expected = "O produto Café da Trybe fabricado em 01/01/2022 por Trybe com validade até 01/02/2022 precisa ser armazenado em local seco."
+expected = "O produto Café da Trybe fabricado em 01/01/2022 por Trybe com \
+    validade até 01/02/2022 precisa ser armazenado em local seco."
 
 
 def test_relatorio_produto():
