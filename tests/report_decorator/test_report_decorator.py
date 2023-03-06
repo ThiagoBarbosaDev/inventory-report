@@ -60,11 +60,11 @@ def test_decorar_relatorio():
         },
     ]
     decoratedReport = ColoredReport(SimpleReport).generate(data)
-    data_de_fabricacao = "\033[36m2022-02-04\033[0m"
-    data_de_validade = "\033[36m2023-05-04\033[0m"
+    data_fabricacao = "\033[36m2022-02-04\033[0m"
+    data_validade = "\033[36m2023-05-04\033[0m"
     empresa = "\033[31mForces of Nature\033[0m"
     assert decoratedReport == (
-        f"\033[32mData de fabricação mais antiga:\033[0m {data_de_fabricacao}\n"
-        f"\033[32mData de validade mais próxima:\033[0m {data_de_validade}\n"
+        f"\033[32mData de fabricação mais antiga:\033[0m {data_fabricacao}\n"
+        f"\033[32mData de validade mais próxima:\033[0m {data_validade}\n"
         f"\033[32mEmpresa com mais produtos:\033[0m {empresa}"
     )
