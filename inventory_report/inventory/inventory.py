@@ -55,8 +55,6 @@ class Inventory:
 
     @staticmethod
     def import_data(path, report_type):
-        print(path)
         data = Inventory.read_data(path)
-        print(data)
         response = Inventory.handle_report_type(report_type, data)
         return response
